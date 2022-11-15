@@ -2,18 +2,17 @@ import java.util.BitSet;
 
 public class BloomFilter {
     public int filter_len;
-    public int[] ma;
+    int filter;
+/*    public int[] ma;*/
 
     public BloomFilter(int f_len) {
         filter_len = f_len;
-
-        ma = new int[filter_len];
+/*        ma = new int[filter_len];*/
+        filter = 0;
     }
 
     public int hash(String str1, int num) {
-        int rand;
-        if (num == 2) rand = 223;
-        rand = 17;
+        int  rand = num;
 
         int pref = 0;
         int rez = 0;
@@ -29,23 +28,29 @@ public class BloomFilter {
         return rez;
     }
     public int hash1(String str1) {
-        return hash(str1, 1);
+        int mask = 0;
+        return mask |= 1 << hash(str1, 17);
+
+/*        return hash(str1, 17);*/
     }
 
     public int hash2(String str1) {
-        return hash(str1, 2);
+        int mask = 0;
+        return mask |= 1 << hash(str1, 223);
+
+/*        return hash(str1, 223);*/
     }
 
     public void add(String str1) {
-        ma[hash1(str1)] = 1;
-        ma[hash2(str1)] = 1;
+        filter |= hash1(str1);
+        filter |= 1 << hash2(str1);
+
+/*        ma[hash1(str1)] = 1;
+        ma[hash2(str1)] = 1;*/
     }
 
     public boolean isValue(String str1) {
-        if (ma[hash1(str1)] == 1 && ma[hash2(str1)] == 1) {
-            return true;
-        }
-
-         return false;
+        return (filter >> hash1(str1) & 1) == 1 && (filter >> hash2(str1) & 1) == 1;
+        // return ma[hash1(str1)] == 1 && ma[hash2(str1)] == 1;
     }
 }
