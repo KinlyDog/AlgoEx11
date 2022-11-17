@@ -1,5 +1,3 @@
-import java.util.BitSet;
-
 public class BloomFilter {
     public int filter_len;
     public int[] ma;
