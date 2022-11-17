@@ -38,10 +38,6 @@ public class BloomFilter {
     }
 
     public boolean isValue(String str1) {
-        if (ma[hash1(str1)] == 1 && ma[hash2(str1)] == 1) {
-            return true;
-        }
-
-        return false;
+        return ma[hash1(str1)] == 1 && ma[hash2(str1)] == 1;
     }
 }
