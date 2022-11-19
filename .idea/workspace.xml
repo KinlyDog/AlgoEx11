@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c94c800-834b-4480-aecd-2e2502b57812" name="Changes" comment="Update tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BloomFilter.java" afterDir="false" />
-    </list>
+    <list default="true" id="7c94c800-834b-4480-aecd-2e2502b57812" name="Changes" comment="Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668704578470</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update">
+      <created>1668829993533</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668829993533</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,7 +126,8 @@
     <MESSAGE value="Update project v2" />
     <MESSAGE value="Update isValue method()" />
     <MESSAGE value="Update tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update tests" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
